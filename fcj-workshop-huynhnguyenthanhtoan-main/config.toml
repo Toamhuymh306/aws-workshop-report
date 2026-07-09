@@ -1,5 +1,5 @@
 baseURL = "https://toamhuymh306.github.io/aws-workshop-report/"
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
