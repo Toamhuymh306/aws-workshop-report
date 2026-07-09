@@ -12,12 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
+
+      - run: |
+          cd fcj-workshop-huynhnguyenthanhtoan-main
+          git submodule update --init --recursive
 
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.134.3'
+          hugo-version: "0.134.3"
           extended: true
 
       - run: cd fcj-workshop-huynhnguyenthanhtoan-main && hugo
