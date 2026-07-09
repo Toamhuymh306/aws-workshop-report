@@ -19,15 +19,14 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.134.3'
+          hugo-version: "0.134.3"
           extended: true
 
       - name: Build
-        run: hugo
+        run: cd fcj-workshop-huynhnguyenthanhtoan-main && hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: toamhuymh306.github.io
+          publish_dir: ./fcj-workshop-huynhnguyenthanhtoan-main/public
